@@ -13,5 +13,4 @@ COPY ./templates/ /etc/confd/templates/
 VOLUME [ "/etc/alertmanager" ]
 
 ENTRYPOINT ["confd"]
-CMD ["-onetime", "-backend", "env"]
-
+CMD ["-backend", "env", "-interval", "60"]
