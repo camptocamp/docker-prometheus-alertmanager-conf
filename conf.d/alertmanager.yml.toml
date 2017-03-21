@@ -1,3 +1,0 @@
-[template]
-src = "alertmanager.yml.tmpl"
-dest = "/etc/alertmanager/alertmanager.yml"
