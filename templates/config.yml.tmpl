@@ -1,6 +1,6 @@
 global:
-  hipchat_auth_token: '{{ getenv HIPCHAT_AUTH_TOKEN }}'
-  hipchat_url: '{{ getenv HIPCHAT_AUTH_URL }}'
+  hipchat_auth_token: '{{ getenv "HIPCHAT_AUTH_TOKEN" }}'
+  hipchat_url: '{{ getenv "HIPCHAT_AUTH_URL" }}'
 
 # The directory from which notification templates are read.
 templates: 
@@ -16,7 +16,7 @@ route:
 receivers:
 - name: 'team-infra-hipchat'
   hipchat_configs:
-  - auth_token: {{ getenv HIPCHAT_AUTH_TOKEN }}
-    room_id: {{ getenv HIPCHAT_ROOM_ID }}
+  - auth_token: {{ getenv "HIPCHAT_AUTH_TOKEN" }}
+    room_id: {{ getenv "HIPCHAT_ROOM_ID" }}
     message_format: html
     notify: true
